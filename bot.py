@@ -77,7 +77,7 @@ def new_game(bot, update):
     else:
         if not chat_id in ALLOWED_GROUPS:
             send_async(bot, user, text=_("Silakan main di @sumbarmaota! Bye 💋"))
-            bot.leave_chat(chat_id)
+            # bot.leave_chat(chat_id, *pargs, **kwargs)
 
         else: 
             if update.message.chat_id in gm.remind_dict:
