@@ -81,21 +81,21 @@ def new_game(bot, update):
 
         else: 
             if update.message.chat_id in gm.remind_dict:
-            for user in gm.remind_dict[update.message.chat_id]:
-                send_async(bot,
-                           user,
-                           text=_("A new game has been started in {title}").format(
-                                title=update.message.chat.title))
+                for user in gm.remind_dict[update.message.chat_id]:
+                    send_async(bot,
+                            user,
+                            text=_("A new game has been started in {title}").format(
+                                    title=update.message.chat.title))
 
-            del gm.remind_dict[update.message.chat_id]
+                del gm.remind_dict[update.message.chat_id]
 
-        game = gm.new_game(update.message.chat)
-        game.starter = update.message.from_user
-        game.owner.append(update.message.from_user.id)
-        game.mode = DEFAULT_GAMEMODE
-        send_async(bot, chat_id,
-                   text=_("Created a new game! Join the game with /join "
-                          "and start the game with /start"))
+            game = gm.new_game(update.message.chat)
+            game.starter = update.message.from_user
+            game.owner.append(update.message.from_user.id)
+            game.mode = DEFAULT_GAMEMODE
+            send_async(bot, chat_id,
+                    text=_("Created a new game! Join the game with /join "
+                            "and start the game with /start"))
 
 
 @user_locale
