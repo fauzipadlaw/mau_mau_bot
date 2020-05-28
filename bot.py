@@ -42,7 +42,7 @@ from simple_commands import help_handler
 from start_bot import start_bot
 from utils import display_name
 from utils import send_async, answer_async, error, TIMEOUT, user_is_creator_or_admin, user_is_creator, game_is_running
-
+import time
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -79,6 +79,7 @@ def new_game(bot, update):
             send_async(bot,
                     chat_id,
                     text=_("Silakan main di @sumbarmaota! Bye 💋"))
+            time.sleep(5)
             bot.leave_chat(chat_id)
 
         else: 
