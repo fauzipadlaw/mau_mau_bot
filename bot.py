@@ -75,7 +75,7 @@ def new_game(bot, update):
         help_handler(bot, update)
 
     else:
-        if chat_id not in ALLOWED_GROUPS
+        if not chat_id in ALLOWED_GROUPS
             send_async(bot, user, text=_("Silakan main di @sumbarmaota! Bye 💋"))
             bot.leave_chat(chat_id)
 
