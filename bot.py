@@ -77,7 +77,7 @@ def new_game(bot, update):
     else:
         if not chat_id in ALLOWED_GROUPS:
             send_async(bot,
-                    user,
+                    chat_id,
                     text=_("Silakan main di @sumbarmaota! Bye 💋"))
             # bot.leave_chat(chat_id, *pargs, **kwargs)
 
