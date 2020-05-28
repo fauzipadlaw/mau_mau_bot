@@ -80,7 +80,7 @@ def new_game(bot, update):
             bot.leave_chat(chat_id)
 
         else: 
-            update.message.chat_id in gm.remind_dict:
+            if update.message.chat_id in gm.remind_dict:
             for user in gm.remind_dict[update.message.chat_id]:
                 send_async(bot,
                            user,
