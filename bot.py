@@ -79,7 +79,7 @@ def new_game(bot, update):
             send_async(bot,
                     chat_id,
                     text=_("Silakan main di @sumbarmaota! Bye 💋"))
-            # bot.leave_chat(chat_id, *pargs, **kwargs)
+            bot.leave_chat(chat_id)
 
         else: 
             if update.message.chat_id in gm.remind_dict:
