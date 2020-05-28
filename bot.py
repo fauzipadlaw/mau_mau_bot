@@ -79,7 +79,7 @@ def new_game(bot, update):
             send_async(bot,
                     chat_id,
                     text=_("Silakan main di @sumbarmaota! Bye 💋"))
-            time.sleep(5)
+            time.sleep(3)
             bot.leave_chat(chat_id)
 
         else: 
